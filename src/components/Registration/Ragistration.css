@@ -1,0 +1,95 @@
+.registration {
+  max-width: 15rem;
+  border-radius: 8px;
+  box-shadow: -10px 10px 6px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  padding: 2rem;
+  margin: auto;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: center;
+  position: relative;
+}
+
+
+input::placeholder {
+  display: block;
+  margin-bottom: 15px;
+  text-align: left;
+  font-size: 15px;
+  color: #e9ebed;
+  font-weight: 500;
+}
+
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3e4c59;
+  color: white;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 25px;
+  background-color: #3e4c59;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 14px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2f3d4a;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -75px;
+  margin-bottom: 20px;
+}
+
+.outer-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #e3e7ea, #ffffff);
+  box-shadow:
+    -9px 10px 20px rgba(0, 0, 0, 0.30),
+    inset -20px -17px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffffff, #cfd4d8);
+  box-shadow:
+    inset 18px -17px 14px rgba(0, 0, 0, 0.15), 
+    -5px 4px 7px rgba(0, 0, 0, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-icon {
+  font-size: 34px;
+  color: #3e4c59;
+}
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 5px;
+}

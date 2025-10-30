@@ -1,7 +1,10 @@
+import { Registration } from "./components/Registration/Registration.tsx";
+
 export const App = () => {
   return (
     <div className="container">
-      <h1>Registrace</h1>
+      <h1>Registration</h1>
+      <Registration/>
     </div>
   );
 };
