@@ -32,19 +32,22 @@ export const Registration = () => {
         setUser(updatedUser)
     }
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
-        if (user.password !== user.passwordConfirm) {
-            setError('Passwords do not match!')
-            return
-        }
-
-        setError('')
-        console.log('User registered:', user)
-
-        console.log(user)
+    if (!user.username.trim() || !user.email.trim() || !user.password.trim() || !user.passwordConfirm.trim()) {
+        setError('Please fill in all fields.')
+        return
     }
+
+    if (user.password !== user.passwordConfirm) {
+        setError('Passwords do not match!')
+        return
+    }
+
+    setError('')
+    console.log('User registered:', user)
+}
 
     return (
         <form className="registration"
@@ -61,12 +64,12 @@ export const Registration = () => {
             <label htmlFor="email">
                 <input
                     id="email"
-                    type="text"
+                    type="email"
                     name='email'
                     onChange={handleChange}
                     value={user.email}
                     placeholder="Email Address"
-                > </input>
+                /> 
             </label>
 
             <label htmlFor="username">
@@ -83,7 +86,7 @@ export const Registration = () => {
             <label htmlFor="password">
                 <input
                     id="password"
-                    type="text"
+                    type="password"
                     name='password'
                     onChange={handleChange}
                     value={user.password}
@@ -94,7 +97,7 @@ export const Registration = () => {
             <label htmlFor="passwordConfirm">
                 <input
                     id="passwordConfirm"
-                    type="text"
+                    type="password"
                     name='passwordConfirm'
                     onChange={handleChange}
                     value={user.passwordConfirm}
